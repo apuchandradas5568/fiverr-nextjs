@@ -23,8 +23,8 @@ export const create = mutation({
       )
       .unique();
 
-    if (!user) {
-      throw new Error("User not found");
+    if (user === null) {
+      return;
     }
 
     const gigId = await ctx.db.insert("gigs", {

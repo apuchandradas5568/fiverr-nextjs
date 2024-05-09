@@ -1,9 +1,7 @@
 "use client";
 
-import { useMutation } from "convex/react";
 import { CreateForm } from "./_components/create-form";
-import { api } from "../../../../../../convex/_generated/api";
-import { useEffect } from "react";
+
 
 interface CreateGigProps {
   params: {
@@ -12,12 +10,6 @@ interface CreateGigProps {
 }
 
 const CreateGig = ({ params }: CreateGigProps) => {
-
-    const insertCategories = useMutation(api.seedCategories.create)
-    
-    useEffect(() => {
-        insertCategories({})
-    }, [])
 
 
 

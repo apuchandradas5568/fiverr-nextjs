@@ -83,7 +83,7 @@ export const CreateForm = ({ username }: CreateFormProps) => {
     mutate({
       title: data.title,
       description: "",
-      subcategories: data.subcategoryId,
+      subcategoryId: data.subcategoryId,
     })
       .then((gigId: Id<"gigs">) => {
         toast.info("Gig created successfully");
