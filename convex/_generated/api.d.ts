@@ -16,6 +16,8 @@ import type {
 } from "convex/server";
 import type * as categories from "../categories.js";
 import type * as gig from "../gig.js";
+import type * as seedCategories from "../seedCategories.js";
+import type * as seedSubCategories from "../seedSubCategories.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -28,6 +30,8 @@ import type * as gig from "../gig.js";
 declare const fullApi: ApiFromModules<{
   categories: typeof categories;
   gig: typeof gig;
+  seedCategories: typeof seedCategories;
+  seedSubCategories: typeof seedSubCategories;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,
